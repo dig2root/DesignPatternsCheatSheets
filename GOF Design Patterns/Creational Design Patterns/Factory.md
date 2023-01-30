@@ -1,7 +1,5 @@
 # Factory
 
-
-
 ## UML Class Diagram
 
 ![Factory](https://upload.wikimedia.org/wikipedia/commons/0/0c/UML_DP_Fabrique.png "The Factory")
