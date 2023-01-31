@@ -9,34 +9,23 @@ Be warned in multi-thread application where two or more threads execute the crea
 
 ## UML Class Diagram
 
-![Singleton](https://upload.wikimedia.org/wikipedia/commons/f/f1/UML_DP_Singleton.png "The Singleton")
+![Singleton](../../images/singleton.png "The Singleton")
 
 ## Code Samples
 
 ### Java
 
 ```Java
-public class Singleton
-{
-    /*
-     * Création de l'instance au niveau de la variable.
-     */
+public class Singleton {
+
+    // The instance is created when the class is loaded
     private static final Singleton INSTANCE = new Singleton();
 
-    /*
-     * La présence d'un constructeur privé supprime
-     * le constructeur public par défaut.
-     */
+    // The constructor is private to prevent instantiation
     private Singleton() {}
 
-    /*
-     * Dans ce cas présent, le mot-clé synchronized n'est pas utile.
-     * L'unique instanciation du singleton se fait avant
-     * l'appel de la méthode getInstance(). Donc aucun risque d'accès concurrents.
-     * Retourne l'instance du singleton.
-     */
-    public static Singleton getInstance()
-    {
+    // The instance is returned by this method
+    public static Singleton getInstance() {
         return INSTANCE;
     }
 }
