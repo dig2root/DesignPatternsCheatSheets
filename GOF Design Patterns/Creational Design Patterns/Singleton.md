@@ -9,13 +9,15 @@ Be warned in multi-thread application where two or more threads execute the crea
 
 ## UML Class Diagram
 
-![Singleton](../../images/singleton.png "The Singleton")
+![Singleton](https://upload.wikimedia.org/wikipedia/commons/f/f1/UML_DP_Singleton.png "The Singleton")
 
 ## Code Samples
 
 ### Java
 
 ```Java
+package gof.creational.singleton;
+
 public class Singleton {
 
     // The instance is created when the class is loaded

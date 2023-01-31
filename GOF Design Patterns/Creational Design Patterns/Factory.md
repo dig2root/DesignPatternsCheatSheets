@@ -9,55 +9,48 @@
 ### Java
 
 ```Java
-public class FabriqueAnimal
-{
-    private static FabriqueAnimal instance = new FabriqueAnimal();
-    
-    private FabriqueAnimal() {}
+package gof.creational.factory;
 
-    public static FabriqueAnimal getFabriqueAnimalInstance() {
-        return instance;
-    }
+public class ProductFactory {
 
-    public Animal getAnimal(String typeAnimal) throws ExceptionCreation
-    {
-        if (typeAnimal.equals("chat"))
-            return new Chat();
-        else if (typeAnimal.equals("chien"))
-            return new Chien();
-        else
-            throw new ExceptionCreation("Impossible de créer un " + typeAnimal);
+    public Product createProduct(String type) {
+        if (type.equals("A")) {
+            return new ProductA();
+        } else if (type.equals("B")) {
+            return new ProductB();
+        } else {
+            return null;
+        }
     }
 }
 
-public abstract class Animal {
-   public abstract void myName();
+public abstract class Product {
+    public abstract void myType();
 }
 
-public class Chat extends Animal {
-   @Override
-   public void myName() {
-     System.out.println("Je suis un Chat");
-   }
+public class ProductA extends Product {
+    @Override
+    public void myType() {
+        System.out.println("I am Product A");
+    }
 }
 
-public class Chien extends Animal {
-   @Override
-   public void myName() {
-     System.out.println("Je suis un Chien");
-   }
+public class ProductB extends Product {
+    @Override
+    public void myType() {
+        System.out.println("I am Product B");
+    }
 }
 
-public class FabriqueExemple{
-   public static void main(String [] args){
-     FabriqueAnimal fabrique =  FabriqueAnimal.getFabriqueAnimalInstance();
-     try {
-       Animal animal = fabrique.getAnimal("chien");
-       animal.myName();
-     } catch(ExceptionCreation e) {
-       e.printStackTrace();
-     }
-   }
+public class Client {
+
+    public static void main(String[] args) {
+        ProductFactory factory = new ProductFactory();
+        Product productA = factory.createProduct("A");
+        Product productB = factory.createProduct("B");
+        productA.myType();
+        productB.myType();
+    }
 }
 ```
 

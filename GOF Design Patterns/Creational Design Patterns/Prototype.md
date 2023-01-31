@@ -11,49 +11,30 @@
 ### Java
 
 ```Java
-/* Classe Prototype */
-public class Cookie implements Cloneable
-{
-    public Cookie clone()
-    {
+package gof.creational.prototype;
+
+public class Prototype {
+
+    public Prototype clone() {
+        Prototype prototype = null;
         try {
-            Cookie copy = (Cookie)super.clone();
-            // Dans une implémentation réelle de ce patron de conception, il faudrait
-            // créer la copie en dupliquant les objets contenus et en attribuants des
-            // valeurs valides (exemple : un nouvel identificateur unique pour la copie).
-            return copy;
+            prototype = (Prototype) super.clone();
         } catch (CloneNotSupportedException e) {
-            return null;
+            e.printStackTrace();
         }
+        return prototype;
     }
 }
 
-/* Prototype concrets à copier */
-public class CoconutCookie extends Cookie { }
+public class ConcretePrototypeA extends Prototype {}
 
-/* Classe utilisatrice */
-public class CookieMachine
-{
-    private Cookie cookie; // peut aussi être déclaré comme : private Cloneable cookie;
+public class ConcretePrototypeB extends Prototype {}
 
-    public CookieMachine(Cookie cookie)
-    { 
-        this.cookie = cookie; 
-    }
+public class Client {
 
-    public Cookie makeCookie()
-    {
-        return cookie.clone(); 
-    }
-
-    public static void main(String args[])
-    { 
-        Cookie        tempCookie =  null; 
-        Cookie        prot       = new CoconutCookie(); 
-        CookieMachine cm         = new CookieMachine(prot); 
-
-        for (int i=0; i<100; i++)
-            tempCookie = cm.makeCookie(); 
+    public static void main(String[] args) {
+        Prototype prototype = new ConcretePrototype();
+        Prototype clonePrototype = prototype.clone();
     }
 }
 ```
