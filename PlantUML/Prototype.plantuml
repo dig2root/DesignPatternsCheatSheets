@@ -3,15 +3,15 @@ class Prototype{
 +clone()
 }
 
-class PrototypeA{
+class ConcretePrototypeA{
 +clone()
 }
 
-class PrototypeB{
+class ConcretePrototypeB{
 +clone()
 }
 
-Prototype <|-- PrototypeA
-Prototype <|-- PrototypeB
+Prototype <|-- ConcretePrototypeA
+Prototype <|-- ConcretePrototypeB
 
 @enduml

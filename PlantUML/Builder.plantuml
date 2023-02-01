@@ -1,0 +1,19 @@
+@startuml Builder
+class Builder{
++getObject() : Object
+}
+
+class Director{}
+
+class ConcreteBuilderA{}
+
+class ConcreteBuilderB{}
+
+class Object{}
+
+Builder <|.. ConcreteBuilderA
+Builder <|.. ConcreteBuilderB
+Director o-- Builder
+Object <.. Builder
+
+@enduml

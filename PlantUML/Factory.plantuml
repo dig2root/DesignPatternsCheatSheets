@@ -9,4 +9,5 @@ Object <|-- ObjectA
 Object <|-- ObjectB
 ObjectA <.. Factory : instantiate
 ObjectB <.. Factory : instantiate
+
 @enduml
