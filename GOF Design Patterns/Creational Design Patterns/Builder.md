@@ -1,5 +1,7 @@
 # Builder
 
+_To do ..._
+
 ## UML Class Diagram
 
 ![Builder](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Builder.plantuml "The Builder")
@@ -19,7 +21,7 @@ public abstract class Builder {
         public abstract void buildPartB();
         public abstract void buildPartC();
 
-        public void build() {
+        public void create() {
             product = new Product();
         }
 
@@ -93,8 +95,8 @@ public class ConcreteBuilderB extends Builder {
 
 public class Director {
 
-        public void construct(Builder builder) {
-            builder.build();
+        public void buildProduct(Builder builder) {
+            builder.create();
             builder.buildPartA();
             builder.buildPartB();
             builder.buildPartC();
@@ -107,9 +109,9 @@ public class Client {
             Director director = new Director();
             Builder builderA = new ConcreteBuilderA();
             Builder builderB = new ConcreteBuilderB();
-            director.construct(builderA);
+            director.buildProduct(builderA);
             Product productA = builderA.getResult();
-            director.construct(builderB);
+            director.buildProduct(builderB);
             Product productB = builderB.getResult();
         }
 }

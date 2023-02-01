@@ -1,6 +1,6 @@
 # Prototype
 
-
+Prototype design pattern is used when creating an instance is complexe or takes time. Instead of creating several instances, the first one is cloned and the clone is modified as desired.
 
 ## UML Class Diagram
 

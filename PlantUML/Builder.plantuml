@@ -1,13 +1,25 @@
 @startuml Builder
-class Builder{
+abstract class Builder{
+- object : Object
++{abstract} buildPartA()
++{abstract} buildPartB()
 +getObject() : Object
 }
 
-class Director{}
+class Director{
+- builder : Builder
++buildObject(Builder)
+}
 
-class ConcreteBuilderA{}
+class ConcreteBuilderA{
++buildPartA()
++buildPartB()
+}
 
-class ConcreteBuilderB{}
+class ConcreteBuilderB{
++buildPartA()
++buildPartB()
+}
 
 class Object{}
 

@@ -1,5 +1,7 @@
 # Factory
 
+Factory design pattern is used to instantiate objects that type is not pre-defined. They are dynamically created depending on parameters specified to the factory.
+
 ## UML Class Diagram
 
 ![Factory](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Factory.plantuml "The Factory")
