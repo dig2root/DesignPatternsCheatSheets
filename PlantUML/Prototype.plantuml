@@ -1,0 +1,17 @@
+@startuml Prototype
+class Prototype{
++clone()
+}
+
+class PrototypeA{
++clone()
+}
+
+class PrototypeB{
++clone()
+}
+
+Prototype <|-- PrototypeA
+Prototype <|-- PrototypeB
+
+@enduml
