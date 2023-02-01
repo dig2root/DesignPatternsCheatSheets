@@ -4,7 +4,7 @@ _To do ..._
 
 ## UML Class Diagram
 
-![Builder](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Builder.plantuml "The Builder")
+![Builder](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Builder.plantuml? "The Builder")
 
 ## Code Samples
 
