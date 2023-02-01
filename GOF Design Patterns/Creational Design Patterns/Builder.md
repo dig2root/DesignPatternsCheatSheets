@@ -9,78 +9,109 @@
 ### Java
 
 ```Java
-/* Produit */
-class Pizza
-{
-    private String pate = "";
-    private String sauce = "";
-    private String garniture = "";
+package gof.creational.builder;
 
-    public void setPate(String pate)          { this.pate = pate; }
-    public void setSauce(String sauce)         { this.sauce = sauce; }
-    public void setGarniture(String garniture) { this.garniture = garniture; }
+public abstract class Builder {
+
+        protected Product product;
+
+        public abstract void buildPartA();
+        public abstract void buildPartB();
+        public abstract void buildPartC();
+
+        public void build() {
+            product = new Product();
+        }
+
+        public Product getResult() {
+            return product;
+        }
 }
 
-/* Monteur */
-abstract class MonteurPizza
-{
-    protected Pizza pizza;
+public class Product {
 
-    public Pizza getPizza() { return pizza; }
-    public void creerNouvellePizza() { pizza = new Pizza(); }
+            private String partA;
+            private String partB;
+            private String partC;
 
-    public abstract void monterPate();
-    public abstract void monterSauce();
-    public abstract void monterGarniture();
+            public void setPartA(String partA) {
+                this.partA = partA;
+            }
+            public void setPartB(String partB) {
+                this.partB = partB;
+            }
+            public void setPartC(String partC) {
+                this.partC = partC;
+            }
 }
 
-/* MonteurConcret */
-class MonteurPizzaHawaii extends MonteurPizza
-{
-    public void monterPate()      { pizza.setPate("croisée"); }
-    public void monterSauce()     { pizza.setSauce("douce"); }
-    public void monterGarniture() { pizza.setGarniture("jambon+ananas"); }
+public class ConcreteBuilderA extends Builder {
+
+        @Override
+        public void buildPartA() {
+            product.setPartA("part A.A");
+        }
+
+        @Override
+        public void buildPartB() {
+            product.setPartB("part A.B");
+        }
+
+        @Override
+        public void buildPartC() {
+            product.setPartC("part A.C");
+        }
+
+        @Override
+        public Product getResult() {
+            return product;
+        }
 }
 
-/* MonteurConcret */
-class MonteurPizzaPiquante extends MonteurPizza
-{
-    public void monterPate()      { pizza.setPate("feuilletée"); }
-    public void monterSauce()     { pizza.setSauce("piquante"); }
-    public void monterGarniture() { pizza.setGarniture("pepperoni+salami"); }
+public class ConcreteBuilderB extends Builder {
+
+        @Override
+        public void buildPartA() {
+            product.setPartA("part B.A");
+        }
+
+        @Override
+        public void buildPartB() {
+            product.setPartB("part B.B");
+        }
+
+        @Override
+        public void buildPartC() {
+            product.setPartC("part B.C");
+        }
+
+        @Override
+        public Product getResult() {
+            return product;
+        }
 }
 
-/* Directeur */
-class Serveur
-{
-    private MonteurPizza monteurPizza;
+public class Director {
 
-    public void setMonteurPizza(MonteurPizza mp) { monteurPizza = mp; }
-    public Pizza getPizza() { return monteurPizza.getPizza(); }
-
-    public void construirePizza()
-    {
-        monteurPizza.creerNouvellePizza();
-        monteurPizza.monterPate();
-        monteurPizza.monterSauce();
-        monteurPizza.monterGarniture();
-    }
+        public void construct(Builder builder) {
+            builder.build();
+            builder.buildPartA();
+            builder.buildPartB();
+            builder.buildPartC();
+        }
 }
 
-/* Un client commandant une pizza. */
-class ExempleMonteur
-{
-    public static void main(String[] args)
-    {
-        Serveur serveur = new Serveur();
-        MonteurPizza monteurPizzaHawaii  = new MonteurPizzaHawaii();
-        MonteurPizza monteurPizzaPiquante = new MonteurPizzaPiquante();
+public class Client {
 
-        serveur.setMonteurPizza(monteurPizzaHawaii);
-        serveur.construirePizza();
-
-        Pizza pizza = serveur.getPizza();
-    }
+        public static void main(String[] args) {
+            Director director = new Director();
+            Builder builderA = new ConcreteBuilderA();
+            Builder builderB = new ConcreteBuilderB();
+            director.construct(builderA);
+            Product productA = builderA.getResult();
+            director.construct(builderB);
+            Product productB = builderB.getResult();
+        }
 }
 ```
 
