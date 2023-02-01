@@ -4,7 +4,7 @@
 
 ## UML Class Diagram
 
-![Prototype](https://upload.wikimedia.org/wikipedia/commons/b/bd/UML_DP_Prototype.png "The Prototype")
+![Prototype](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Prototype.plantuml "The Prototype")
 
 ## Code Samples
 

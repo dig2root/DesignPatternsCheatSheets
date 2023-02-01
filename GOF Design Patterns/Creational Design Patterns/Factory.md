@@ -2,7 +2,7 @@
 
 ## UML Class Diagram
 
-![Factory](https://upload.wikimedia.org/wikipedia/commons/0/0c/UML_DP_Fabrique.png "The Factory")
+![Factory](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Factory.plantuml "The Factory")
 
 ## Code Samples
 

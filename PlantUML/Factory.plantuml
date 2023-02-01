@@ -1,0 +1,12 @@
+@startuml Factory
+class Factory{
++createObject() : Object
+}
+
+abstract class Object{}
+
+Object <|-- ObjectA
+Object <|-- ObjectB
+ObjectA <.. Factory : instantiate
+ObjectB <.. Factory : instantiate
+@enduml

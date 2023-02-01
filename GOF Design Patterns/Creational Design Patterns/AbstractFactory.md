@@ -2,7 +2,7 @@
 
 ## UML Class Diagram
 
-![Abstract factory](https://upload.wikimedia.org/wikipedia/commons/e/e9/UML_DP_FabriqueAbstraite.png "The Abstract Factory")
+![Abstract factory](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/AbstractFactory.plantuml "The Abstract Factory")
 
 ## Code Samples
 

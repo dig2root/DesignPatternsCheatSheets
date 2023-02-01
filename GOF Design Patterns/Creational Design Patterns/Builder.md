@@ -2,7 +2,7 @@
 
 ## UML Class Diagram
 
-![Builder](https://upload.wikimedia.org/wikipedia/commons/8/87/UML_DP_Monteur.png "The Builder")
+![Builder](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Builder.plantuml "The Builder")
 
 ## Code Samples
 
