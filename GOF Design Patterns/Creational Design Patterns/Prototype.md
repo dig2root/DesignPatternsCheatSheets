@@ -33,8 +33,10 @@ public class ConcretePrototypeB extends Prototype {}
 public class Client {
 
     public static void main(String[] args) {
-        Prototype prototype = new ConcretePrototype();
-        Prototype clonePrototype = prototype.clone();
+        Prototype prototypeA = new ConcretePrototypeA();
+        Prototype prototypeB = new ConcretePrototypeB();
+        Prototype clonePrototypeA = prototypeA.clone();
+        Prototype clonePrototypeB = prototypeB.clone();
     }
 }
 ```
