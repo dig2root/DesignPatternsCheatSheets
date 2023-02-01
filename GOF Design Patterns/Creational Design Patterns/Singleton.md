@@ -9,22 +9,7 @@ Be warned in multi-thread application where two or more threads execute the crea
 
 ## UML Class Diagram
 
-![Singleton](http://www.plantuml.com/plantuml/proxy?src= "The Singleton")
-
-```plantuml
-@startuml
-class A {
-{static} int counter
-+void {abstract} start(int timeout)
-}
-note right of A::counter
-  This member is annotated
-end note
-note right of A::start
-  This method is now explained in a UML note
-end note
-@enduml
-```
+![Singleton](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Singleton.plantuml "The Singleton")
 
 ## Code Samples
 
