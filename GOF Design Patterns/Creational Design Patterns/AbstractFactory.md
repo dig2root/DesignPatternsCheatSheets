@@ -4,7 +4,7 @@ _To do ..._
 
 ## UML Class Diagram
 
-![Abstract factory](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/AbstractFactory.txt? "The Abstract Factory")
+![Abstract factory](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/AbstractFactory.puml? "The Abstract Factory")
 
 ## Code Samples
 

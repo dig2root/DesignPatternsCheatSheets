@@ -9,7 +9,7 @@ Be warned in multi-thread application where two or more threads execute the crea
 
 ## UML Class Diagram
 
-![Singleton](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Singleton.txt? "The Singleton")
+![Singleton](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Singleton.puml? "The Singleton")
 
 ## Code Samples
 

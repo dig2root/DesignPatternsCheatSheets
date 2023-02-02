@@ -4,7 +4,7 @@ Factory design pattern is used to instantiate objects that type is not pre-defin
 
 ## UML Class Diagram
 
-![Factory](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Factory.txt? "The Factory")
+![Factory](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Factory.puml? "The Factory")
 
 ## Code Samples
 
