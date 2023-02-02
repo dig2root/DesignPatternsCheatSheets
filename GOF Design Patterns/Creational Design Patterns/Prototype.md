@@ -4,7 +4,7 @@ Prototype design pattern is used when creating an instance is complexe or takes 
 
 ## UML Class Diagram
 
-![Prototype](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Prototype.plantuml? "The Prototype")
+![Prototype](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/dig2root/DesignPatternsCheatSheets/main/PlantUML/Prototype.txt? "The Prototype")
 
 ## Code Samples
 
