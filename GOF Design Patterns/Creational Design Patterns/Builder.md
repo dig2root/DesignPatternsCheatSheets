@@ -63,11 +63,6 @@ public class ConcreteBuilderA extends Builder {
         public void buildPartC() {
             product.setPartC("part A.C");
         }
-
-        @Override
-        public Product getResult() {
-            return product;
-        }
 }
 
 public class ConcreteBuilderB extends Builder {
@@ -85,11 +80,6 @@ public class ConcreteBuilderB extends Builder {
         @Override
         public void buildPartC() {
             product.setPartC("part B.C");
-        }
-
-        @Override
-        public Product getResult() {
-            return product;
         }
 }
 
