@@ -1,0 +1,50 @@
+@startuml AbstractFactory
+interface AbstractFactory {
+{abstract} + createObjectA()
+{abstract} + createObjectB()
+}
+
+class ConcreteFactory1 {
++ createObjectA()
++ createObjectB()
+}
+
+class ConcreteFactory2 {
++ createObjectA()
++ createObjectB()
+}
+
+AbstractFactory <|.. ConcreteFactory1
+AbstractFactory <|.. ConcreteFactory2
+
+interface ObjectA {
+}
+
+class ObjectA1 {
+}
+
+class ObjectA2 {
+}
+
+ObjectA <|.. ObjectA1
+ObjectA <|.. ObjectA2
+
+interface ObjectB {
+}
+
+class ObjectB1 {
+}
+
+class ObjectB2 {
+}
+
+ObjectB <|.. ObjectB1
+ObjectB <|.. ObjectB2
+
+ObjectA1 <.. ConcreteFactory1 : instantiate
+ObjectB1 <.. ConcreteFactory1 : instantiate
+
+ObjectA2 <.. ConcreteFactory2 : instantiate
+ObjectB2 <.. ConcreteFactory2 : instantiate
+
+@enduml

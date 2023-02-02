@@ -1,6 +1,10 @@
 # Builder
 
-_To do ..._
+The Builder design pattern is a creational pattern that allows for the construction of complex objects step by step. 
+
+The pattern consists of a **Builder** abstract class that defines the steps to be taken in the construction process, a **ConcreteBuilder** that implements these steps, a **Director** class that oversees the construction process and a **Product** that represents the final object being constructed.
+
+This pattern is useful when the process of constructing an object is complicated and requires multiple steps, or when the final representation of the object can vary depending on the construction process.
 
 ## UML Class Diagram
 
