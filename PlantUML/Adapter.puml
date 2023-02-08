@@ -1,0 +1,20 @@
+@startuml Adapter
+
+abstract class IAdapter {
++{abstract} request()
+}
+
+IAdapter <-- Client
+
+class Adapter {
++ request()
+}
+
+class Adaptee {
++ specificRequest()
+}
+
+IAdapter <|.. Adapter
+Adaptee <|-- Adapter
+
+@enduml

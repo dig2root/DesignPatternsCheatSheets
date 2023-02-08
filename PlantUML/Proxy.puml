@@ -1,0 +1,22 @@
+@startuml Proxy
+
+abstract class IObject {
++{abstract} methodA()
++{abstract} methodB()
+}
+
+class Proxy {
++ methodA()
++ methodB()
+}
+
+class Object{
++ methodA() 
++ methodB()
+}
+
+IObject <|.. Proxy
+IObject <|.. Object
+Object <.. Proxy
+
+@enduml

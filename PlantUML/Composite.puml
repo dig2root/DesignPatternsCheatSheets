@@ -1,0 +1,23 @@
+@startuml Composite
+
+abstract class Object {
++{abstract} operation()
++{abstract} add(Object)
++{abstract} remove(Object)
+}
+
+class ObjectComposite {
++ operation()
++ add(Object)
++ remove(Object)
+}
+
+class ObjectLeaf {
++ operation()
+}
+
+Object <|.. ObjectComposite
+Object <--o ObjectComposite
+Object <|.. ObjectLeaf
+
+@enduml

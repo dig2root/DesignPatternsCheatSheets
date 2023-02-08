@@ -1,0 +1,13 @@
+@startuml Facade
+
+class Facade {
++ method()
+}
+
+Facade <-- Client
+
+SubSystemA <.. Facade
+SubSystemB <.. Facade
+SubSystemC <.. Facade
+
+@enduml
